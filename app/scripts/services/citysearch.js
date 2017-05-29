@@ -13,7 +13,7 @@ angular.module('climaDineV1App')
     // ...
 
     // Public API here
-    return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&type=like&mode=json&APPID=25a5df8ebd32460734453c364ce1c8f7', {}, {
+    return $resource('http://api.openweathermap.org/data/2.5/find?q=:query&type=like&units=imperial&mode=json&APPID=25a5df8ebd32460734453c364ce1c8f7', {}, {
       find: {
         method: 'GET',
         params: {
