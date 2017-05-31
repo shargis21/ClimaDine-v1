@@ -221,7 +221,7 @@ angular.module('climaDineV1App')
 
       '731': {
         'label': 'sand, dust whirls',
-        'icon': 'cloudy-gusts'
+        'icon': 'day-cloudy-gusts'
       },
 
       '741': {
@@ -256,7 +256,7 @@ angular.module('climaDineV1App')
 
       '800': {
         'label': 'clear sky',
-        'icon': 'sunny'
+        'icon': 'wi-day-sunny'
       },
 
       '801': {
@@ -276,7 +276,7 @@ angular.module('climaDineV1App')
 
       '804': {
         'label': 'overcast clouds',
-        'icon': 'wi-day-cloudy'
+        'icon': 'cloudy'
       },
 
 
@@ -317,7 +317,7 @@ angular.module('climaDineV1App')
 
       '951': {
         'label': 'calm',
-        'icon': 'sunny'
+        'icon': 'wi-day-sunny'
       },
 
       '952': {
