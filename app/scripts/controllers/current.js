@@ -8,6 +8,7 @@ angular.module('climaDineV1App')
         cityID: $routeParams.cityID
     });
 
+// function to call icons for current weather //
     $scope.currentWeatherIcon = {
       '200': {
         'label': 'thunderstorm with light rain',
