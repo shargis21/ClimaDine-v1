@@ -523,6 +523,8 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
+  grunt.loadNpmTasks('grunt-autoprefixer');
+
   grunt.registerTask('default', [
     'newer:jshint',
     'newer:jscs',

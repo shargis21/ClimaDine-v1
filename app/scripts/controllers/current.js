@@ -276,7 +276,7 @@ angular.module('climaDineV1App')
 
       '804': {
         'label': 'overcast clouds',
-        'icon': 'wi-day-lightning'
+        'icon': 'wi-day-cloudy'
       },
 
 
