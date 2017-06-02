@@ -264,7 +264,7 @@ angular.module('climaDineV1App')
 
         '800': {
           'label': 'clear sky',
-          'icon': 'day-sunny'
+          'icon': 'wi-day-sunny'
         },
 
         '801': {

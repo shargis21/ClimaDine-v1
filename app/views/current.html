@@ -20,4 +20,5 @@
     <dd>{{currentWeather.clouds.all}}%</dd>
 </dl>
 <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[currentWeather.weather[0].id].icon}}"></i></div>
+<p><a ng-href="#!/week/{{cityID}}" class="btn btn-lg btn-primary">View 5-day Forecast</a></p>
 <p><a ng-href="#!/forecast/{{cityID}}" class="btn btn-lg btn-primary">View 16-day Forecast</a></p>
