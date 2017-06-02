@@ -1,13 +1,41 @@
-<h1>16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
+<div class="3-day">
+<h1>3-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
+<dl ng-repeat="prediction in forecastData.list | limitTo: 3" class="weather-forecast">
+    <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+    <dd>{{prediction.weather[0].main}}</dd>
+    <dd>{{prediction.weather[0].description}}</dd>
+    <dt>Temperature</dt>
+    <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
+
+        <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
+</div>
+
+
+<div class="7-day">
+<h1>7-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
+<dl ng-repeat="prediction in forecastData.list | limitTo: 7" class="weather-forecast">
+    <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+    <dd>{{prediction.weather[0].main}}</dd>
+    <dd>{{prediction.weather[0].description}}</dd>
+    <dt>Temperature</dt>
+    <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
+
+        <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
+</div>
+
+
+<div class="16-day">
+  <h1>16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
 <dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
-    <dt>Forecast for {{weather.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+    <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
     <dd>{{prediction.weather[0].main}}</dd>
     <dd>{{prediction.weather[0].description}}</dd>
     <dt>Temperature</dt>
     <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
 
     <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
-
 </dl>
+</div>
+
 
 <p><a ng-href="#!/current/{{cityID}}" class="btn btn-lg btn-primary">View Current Weather</a></p>
