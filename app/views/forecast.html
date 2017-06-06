@@ -1,41 +1,72 @@
-<div class="3-day">
-<h1>3-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
-<dl ng-repeat="prediction in forecastData.list | limitTo: 3" class="weather-forecast">
-    <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
-    <dd>{{prediction.weather[0].main}}</dd>
-    <dd>{{prediction.weather[0].description}}</dd>
-    <dt>Temperature</dt>
-    <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        3-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <dl ng-repeat="prediction in forecastData.list | limitTo: 3" class="weather-forecast">
+            <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+            <dd>{{prediction.weather[0].main}}</dd>
+            <dd>{{prediction.weather[0].description}}</dd>
+            <dt>Temperature</dt>
+            <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
 
-        <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
+                <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        7-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="7-day">
+          <dl ng-repeat="prediction in forecastData.list | limitTo: 7" class="weather-forecast">
+              <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+              <dd>{{prediction.weather[0].main}}</dd>
+              <dd>{{prediction.weather[0].description}}</dd>
+              <dt>Temperature</dt>
+              <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
+
+             <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="16-day">
+            <dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
+                <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
+                <dd>{{prediction.weather[0].main}}</dd>
+                <dd>{{prediction.weather[0].description}}</dd>
+                <dt>Temperature</dt>
+                <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
+
+            <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
+        </dl>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
-<div class="7-day">
-<h1>7-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
-<dl ng-repeat="prediction in forecastData.list | limitTo: 7" class="weather-forecast">
-    <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
-    <dd>{{prediction.weather[0].main}}</dd>
-    <dd>{{prediction.weather[0].description}}</dd>
-    <dt>Temperature</dt>
-    <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
-
-        <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
-</div>
-
-
-<div class="16-day">
-  <h1>16-day Forecast for {{forecastData.city.name}} {{forecastData.city.country}}</h1>
-<dl ng-repeat="prediction in forecastData.list" class="weather-forecast">
-    <dt>Forecast for {{prediction.dt*1000 | date:'MMM dd, yyyy'}}</dt>
-    <dd>{{prediction.weather[0].main}}</dd>
-    <dd>{{prediction.weather[0].description}}</dd>
-    <dt>Temperature</dt>
-    <dd>Min: {{prediction.temp.min}} &deg;F Max: {{prediction.temp.max}} &deg;F</dd>
-
-    <div class="weather-icon"><i style="font-size: 5em;" class="wi wi-{{currentWeatherIcon[prediction.weather[0].id].icon}}"></i></div>
-</dl>
-</div>
-
-
-<p><a ng-href="#!/current/{{cityID}}" class="btn btn-lg btn-primary">View Current Weather</a></p>
+<p><a ng-href="#!/current/{{cityID}}" class="btn btn-sm btn-primary">View Current Weather</a></p>
