@@ -33,14 +33,15 @@ ul {
    padding: 0;
 }
 
-ul li {
-  display: block;
-  width: 20%;
-  padding: 10px 5px;
-  float: left;
-  text-align: center;
-}
-
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background-color: transparent;
+}
+
+.btn-success {
+  background: #D581AC;
+  padding-top: 15px;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active:focus, .btn-success:active, .btn-success.active, {
+  background: #ECB4D1;
 }

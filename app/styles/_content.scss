@@ -1,1 +1,65 @@
 // styles for site content //
+
+.min-temp {
+  color: #0099cc;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.max-temp {
+  font-weight: bold;
+  font-size: 3em;
+  padding-top: 15px;
+  color: white;
+}
+
+.temp-current {
+  font-weight: bold;
+  font-size: 7em;
+  color: white;
+}
+
+.more-info {
+  padding-top: 30px;
+}
+
+.current-container {
+
+}
+
+.ng-valid {
+  color: black;
+}
+
+.navbar-default {
+  background-color: #0099cc;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.panel-body {
+  background: #9AD4DB;
+}
+
+.weather-icon {
+  color: #E8F9FB;
+}
+
+.panel-title {
+  color:#0A758F;
+}
+
+h4 {
+  color: #485356;
+}
+
+.description {
+  color: #485356;
+  font-weight: bold;
+}
+
+.weather-forecast {
+  background: blue;
+}
