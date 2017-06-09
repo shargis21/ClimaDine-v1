@@ -1,13 +1,22 @@
+<div class="current-container">
+    <h1>Current Weather for {{currentWeather.name}}</h1>
+    <div class="container current-forecast">
+        <div class="row forecast-icon">
+            <div class="col-md-6">
+            <div class="weather-icon"><i style="font-size: 9em;" class="wi wi-{{currentWeatherIcon[currentWeather.weather[0].id].icon}}"></i></div>
+            <strong><p class="current-temp">{{currentWeather.main.temp}}&deg;</p></strong>
+            </div>
 
-
-<div class="row">
-  <div class="current-container col-md-6">
-          <dl>
-            <dt><h3>{{currentWeather.name}}</h3></dt>
-            <dd>{{currentWeather.weather[0].main}}</dd>
-            <div class="weather-icon"><i style="font-size: 7em;" class="wi wi-{{currentWeatherIcon[currentWeather.weather[0].id].icon}}"></i></div>
-            <dd class="temp-current">{{currentWeather.main.temp}}&deg;</dd></div>
-          </div>
+            <div class="col-md-6" id="temp current-description">
+                <p class="max-current-temp">⬆︎ {{currentWeather.main.temp_max}}&deg;</p>
+                <p class="min-current-temp">⬇︎ {{currentWeather.main.temp_min}}&deg;</p>
+                <p><strong>Currently:</strong> {{currentWeather.weather[0].main}}, {{currentWeather.weather[0].description}}</p>
+                <p class="current-wind"><strong>Wind:</strong> {{currentWeather.wind.speed}} mph at {{currentWeather.wind.deg}} &deg;</p>
+                <p class="current-clouds"><strong>Clouds:</strong> {{currentWeather.clouds.all}}%</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="more-info">
 <p><a ng-href="#!/forecast/{{cityID}}" class="btn btn-sm btn-success">Longer Forecasts</a></p>

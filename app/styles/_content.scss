@@ -40,7 +40,7 @@
 }
 
 .panel-body {
-  background: #9AD4DB;
+  background: transparent;
 }
 
 .weather-icon {
@@ -59,3 +59,53 @@ h4 {
   color: #485356;
   font-weight: bold;
 }
+
+.forecast-data {
+    background-color: #91D1E2;
+    max-width: 250px;
+    min-width: 150px;
+    padding: 15px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+
+//Custom Styling - Current Weather///
+.current-container.ng-scope {
+    background-color: #91D1E2;
+    padding: 30px;
+    border-radius: 6px;
+    max-width: 1000px;
+    margin: 20px auto 20px auto;
+
+
+
+        .current-temp.ng-binding {
+            font-size: 75px;
+            color: white;
+        }
+
+        .container.current-forecast, .row.forecast-icon {
+            max-width: 1000px;
+            margin-top: 15px;
+    }
+       .max-current-temp {
+         font-size: 35px;
+         color: #f45342;
+         font-weight: bold;
+       }
+
+      .min-current-temp {
+        font-size: 35px;
+        color: #0099cc;
+        font-weight: bold;
+        padding-bottom: 15px;
+      }
+
+}
+
+///END - Custom Styling - Current Weather//
